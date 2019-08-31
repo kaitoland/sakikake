@@ -1,11 +1,12 @@
 <div>
   <ul class="sidebar-nav">
-    <li><%= link_to  'Profile' , 'users' %></li>
+    <li><%= link_to 'Profile' , user_path(current_user.id) %></li>
     <li><a href="#">所属Team</a></li>
     <li><a href="#">所属Project</a></li>
     <li><a href="#">Schedule</a></li>
     <li><a href="#">Memo</a></li>
     <li><a href="#">設定</a></li>
     <li><a href="#">Help</a></li>
+    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
   </ul>
 </div>
