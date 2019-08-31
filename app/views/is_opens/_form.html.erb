@@ -1,0 +1,42 @@
+<%= form_with(model: is_open, local: true) do |form| %>
+  <% if is_open.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(is_open.errors.count, "error") %> prohibited this is_open from being saved:</h2>
+
+      <ul>
+      <% is_open.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :join_team %>
+    <%= form.number_field :join_team %>
+  </div>
+
+  <div class="field">
+    <%= form.label :join_project %>
+    <%= form.number_field :join_project %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.number_field :comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

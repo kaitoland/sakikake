@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_id: 1
+  project_id: 1
+  icon: MyString
+  is_public: 1
+  comment: MyString
+
+two:
+  team_id: 1
+  project_id: 1
+  icon: MyString
+  is_public: 1
+  comment: MyString

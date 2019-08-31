@@ -1,0 +1,2 @@
+class IsOpen < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @team_project.team_id %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @team_project.project_id %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @team_project.icon %>
+</p>
+
+<p>
+  <strong>Is public:</strong>
+  <%= @team_project.is_public %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @team_project.comment %>
+</p>
+
+<%= link_to 'Edit', edit_team_project_path(@team_project) %> |
+<%= link_to 'Back', team_projects_path %>

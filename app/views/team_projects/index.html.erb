@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Team Projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>Project</th>
+      <th>Icon</th>
+      <th>Is public</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @team_projects.each do |team_project| %>
+      <tr>
+        <td><%= team_project.team_id %></td>
+        <td><%= team_project.project_id %></td>
+        <td><%= team_project.icon %></td>
+        <td><%= team_project.is_public %></td>
+        <td><%= team_project.comment %></td>
+        <td><%= link_to 'Show', team_project %></td>
+        <td><%= link_to 'Edit', edit_team_project_path(team_project) %></td>
+        <td><%= link_to 'Destroy', team_project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Team Project', new_team_project_path %>

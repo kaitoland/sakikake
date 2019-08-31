@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @is_open.user_id %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @is_open.age %>
+</p>
+
+<p>
+  <strong>Join team:</strong>
+  <%= @is_open.join_team %>
+</p>
+
+<p>
+  <strong>Join project:</strong>
+  <%= @is_open.join_project %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @is_open.comment %>
+</p>
+
+<%= link_to 'Edit', edit_is_open_path(@is_open) %> |
+<%= link_to 'Back', is_opens_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Is Opens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Age</th>
+      <th>Join team</th>
+      <th>Join project</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @is_opens.each do |is_open| %>
+      <tr>
+        <td><%= is_open.user_id %></td>
+        <td><%= is_open.age %></td>
+        <td><%= is_open.join_team %></td>
+        <td><%= is_open.join_project %></td>
+        <td><%= is_open.comment %></td>
+        <td><%= link_to 'Show', is_open %></td>
+        <td><%= link_to 'Edit', edit_is_open_path(is_open) %></td>
+        <td><%= link_to 'Destroy', is_open, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Is Open', new_is_open_path %>

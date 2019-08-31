@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @release.project_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @release.name %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @release.icon %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @release.tag %>
+</p>
+
+<p>
+  <strong>Is public:</strong>
+  <%= @release.is_public %>
+</p>
+
+<%= link_to 'Edit', edit_release_path(@release) %> |
+<%= link_to 'Back', releases_path %>
