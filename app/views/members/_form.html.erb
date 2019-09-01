@@ -10,14 +10,9 @@
       </ul>
     </div>
   <% end %>
-
+  <%= form.hidden_field :team_id, :value =>@member.team_id %>
   <div class="field">
-    <%= form.label :team_id %>
-    <%= form.number_field :team_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
+    <%= form.label :user_id ,"USER_ID"%>
     <%= form.text_field :user_id %>
   </div>
 
