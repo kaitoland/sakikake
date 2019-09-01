@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to:'home#index'
   devise_for :users, :controllers => {
   :registrations => 'users/registrations',
   :sessions => 'users/sessions'
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
     get "login", :to => "users/sessions#new"
     get "logout", :to => "users/sessions#destroy"
   end
+  resources :users
   resources :is_opens
   resources :reviews
   resources :releases
@@ -19,7 +21,5 @@ Rails.application.routes.draw do
   resources :memos
   resources :messages
   resources :members
-  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to:'home#index'
 end

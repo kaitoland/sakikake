@@ -1,35 +1,36 @@
-<p id="notice"><%= notice %></p>
+<!--inner block start here-->
+<div class="cols-grids panel-widget">
+  <%= link_to '自分のプロフィール', user_path(current_user) ,class: 'btn btn-success pull-right'%>
+  <h2 class=>ユーザ一覧</h2>
+  <div class="chute chute-center text-center">
+    <table>
+      <thead>
+        <tr>
+          <th class="col-xs-1 col-ms-1 col-md-1">id</th>
+          <th class="col-xs-1 col-ms-1 col-md-1">名前</th>
+          <th class="col-xs-2 col-ms-2 col-md-2">年齢</th>
+          <th class="col-xs-1 col-ms-1 col-md-1">アイコン</th>
+          <th class="col-xs-4 col-ms-4 col-md-4">コメント</th>
+        </tr>
+      </thead>
 
-<h1>Users</h1>
+      <tbody>
+        <% @users.each do |user| %>
+        <tr>
+          <td class="col-xs-1 col-ms-1 col-md-1" align="left"><%= user.id %></td>
+          <td class="col-xs-2 col-ms-2 col-md-2" align="left"><%= user.name %></td>
+          <td class="col-xs-1 col-ms-1 col-md-2" align="left"><%= user.age %></td>
+          <td class="col-xs-4 col-ms-4 col-md-1" align="left"><%= user.icon %></td>
+          <td class="col-xs-4 col-ms-4 col-md-4" align="left"><%= user.comment %></td>
+          <td><%= link_to '詳細を確認', user ,class: 'btn btn-info'%></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Icon</th>
-      <th>Comment</th>
-      <th>Is accept message</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <br>
+    <%= paginate @users %>
+  </div>
+</div>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.age %></td>
-        <td><%= user.icon %></td>
-        <td><%= user.comment %></td>
-        <td><%= user.is_accept_message %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
+<!--inner block end here-->
