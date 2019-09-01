@@ -35,8 +35,8 @@
 }
 
 .footer {
-  position: absolute;
-  bottom: 0px;
+  position: fixed;
+  bottom: 0;
   background-color: #e6e6fa;
   color:#333;
   text-align: center;
@@ -71,4 +71,10 @@
 
 .sidebar-nav li:hover{
   background:#fff;
+}
+
+.sidebar-right {
+  float: right;
+  background-color: #846bab;
+  height: 95vh;
 }
